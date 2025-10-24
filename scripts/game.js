@@ -66,7 +66,8 @@ for (const choice of choiceTexts) {
 function getNewQuestion() {
   questionCounter++;
   if (questionCounter >= questions.length) {
-    return window.location.assign('menu.html');
+    localStorage.setItem("mostRecentScore",score);
+    return window.location.assign('end.html');
   }
   progressText.text(`${questionCounter+1}/${questions.length}`);
   progressBarFull.css({'width':`${((questionCounter+1)/questions.length)*100}%`})
