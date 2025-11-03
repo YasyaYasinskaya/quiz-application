@@ -1,3 +1,4 @@
+
 const username = $('#username');
 const saveScoreBtn = $('#saveScoreBtn');
 const mostRecentScore = localStorage.getItem('mostRecentScore');

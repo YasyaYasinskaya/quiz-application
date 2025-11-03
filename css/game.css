@@ -36,7 +36,11 @@
 }
 
 #hud{
+<<<<<<< HEAD
   display:flex;
+=======
+  display: flex;
+>>>>>>> 237620c9340fd1aba69190bab239077e1d623fff
   justify-content: space-between;
 }
 
@@ -45,19 +49,34 @@
   font-size: 2rem;
 }
 
+<<<<<<< HEAD
 .hud-prefix-text{
+=======
+.hud-main-text{
+>>>>>>> 237620c9340fd1aba69190bab239077e1d623fff
   text-align: center;
 }
 
 #progressBar{
+<<<<<<< HEAD
   width: 20rem;
   height: 4rem;
   border: 0.3rem solid #56a5eb;
   margin-top: 1.5rem;
+=======
+  width:20rem;
+  height: 4rem;
+  border: 0.3rem solid #56a5eb;
+  margin-top:1.5rem;
+>>>>>>> 237620c9340fd1aba69190bab239077e1d623fff
 }
 
 #progressBarFull{
   height: 3.4rem;
   background-color: #56a5eb;
+<<<<<<< HEAD
   width: 0%;
+=======
+  width:0%;
+>>>>>>> 237620c9340fd1aba69190bab239077e1d623fff
 }
