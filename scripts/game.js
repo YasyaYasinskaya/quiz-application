@@ -16,34 +16,50 @@ let questionCounter = -1;
 let acceptingAnswers = false;
 let score=-0;
 
+// $.ajax({
+//   method: 'GET',
+//   url: 'https://opentdb.com/api.php?amount=3',
+//   dataType: "json"
+// })
+// .done(function(response) {
+//   for (const loadedQuestion of response.results) {
+//     const formattedQuestion = {
+//       'question': $.parseHTML(loadedQuestion.question)[0].textContent
+//     };
+//     const answerChoices = [];
+//     for (const incorrectAnswer of loadedQuestion.incorrect_answers) {
+//       const parsedIncorrectAnswer = $.parseHTML(incorrectAnswer)[0].textContent;
+//       answerChoices.push(parsedIncorrectAnswer);
+//     }
+//     formattedQuestion.answerIndex = Math.floor(Math.random() * answerChoices.length);
+//     const parsedCorrectAnswer = $.parseHTML(loadedQuestion.correct_answer)[0].textContent;
+//     answerChoices.splice(formattedQuestion.answerIndex, 0, parsedCorrectAnswer);
+//     formattedQuestion.answerChoices = answerChoices;
+//     questions.push(formattedQuestion);
+//   }
+//   game.removeClass('hidden');
+//   loader.addClass('hidden');
+//   getNewQuestion();
+// })
+// .fail(function(err) {
+//   console.error(err);
+// });
+
 $.ajax({
   method: 'GET',
-  url: 'https://opentdb.com/api.php?amount=3',
+  url: 'resources/questions.json',
   dataType: "json"
 })
 .done(function(response) {
-  for (const loadedQuestion of response.results) {
-    const formattedQuestion = {
-      'question': $.parseHTML(loadedQuestion.question)[0].textContent
-    };
-    const answerChoices = [];
-    for (const incorrectAnswer of loadedQuestion.incorrect_answers) {
-      const parsedIncorrectAnswer = $.parseHTML(incorrectAnswer)[0].textContent;
-      answerChoices.push(parsedIncorrectAnswer);
-    }
-    formattedQuestion.answerIndex = Math.floor(Math.random() * answerChoices.length);
-    const parsedCorrectAnswer = $.parseHTML(loadedQuestion.correct_answer)[0].textContent;
-    answerChoices.splice(formattedQuestion.answerIndex, 0, parsedCorrectAnswer);
-    formattedQuestion.answerChoices = answerChoices;
-    questions.push(formattedQuestion);
-  }
+  questions = response;
   game.removeClass('hidden');
   loader.addClass('hidden');
   getNewQuestion();
 })
 .fail(function(err) {
-  console.error(err);
-});
+  console.error(err)
+})
+
 
 
 for (const choice of choiceTexts) {
