@@ -106,39 +106,24 @@ h3 {
   transform: none;
 }
 
-form{
-<<<<<<< HEAD
+form {
   width: 100%;
-  display:flex;
-=======
-  width:100%;
   display: flex;
->>>>>>> 237620c9340fd1aba69190bab239077e1d623fff
   flex-direction: column;
   align-items: center;
 }
 
-input{
+
+input {
   margin-bottom: 1rem;
-<<<<<<< HEAD
   width: 20rem;
   padding: 1.5rem;
   font-size: 1.8rem;
   border: none;
-=======
-  width:20rem;
-  padding:1.5rem;
-  font-size: 1.8rem;
-  border:none;
->>>>>>> 237620c9340fd1aba69190bab239077e1d623fff
   box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
 }
 
-input::placeholder{
-<<<<<<< HEAD
+
+input::placeholder {
   color: #aaa;
-  
-=======
-  color:#aaa;
->>>>>>> 237620c9340fd1aba69190bab239077e1d623fff
 }
